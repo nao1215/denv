@@ -1,3 +1,4 @@
+![Coverage](https://raw.githubusercontent.com/nao1215/octocovs-central-repo/main/badges/nao1215/denv/coverage.svg)
 [![LinuxUnitTest](https://github.com/nao1215/denv/actions/workflows/linux_test.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/linux_test.yml)
 [![MacUnitTest](https://github.com/nao1215/denv/actions/workflows/mac_test.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/mac_test.yml)
 [![WindowsUnitTest](https://github.com/nao1215/denv/actions/workflows/windows_test.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/windows_test.yml)
@@ -8,6 +9,8 @@
 [![Gosec](https://github.com/nao1215/denv/actions/workflows/security.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/security.yml)
 [![Vuluncheck](https://github.com/nao1215/denv/actions/workflows/govulncheck.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/govulncheck.yml)
 [![reviewdog](https://github.com/nao1215/denv/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/reviewdog.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/nao1215/denv.svg)](https://pkg.go.dev/github.com/nao1215/denv)
+[![Go Report Card](https://goreportcard.com/badge/github.com/nao1215/denv)](https://goreportcard.com/report/github.com/nao1215/denv)
 # denv
 "denv" is a library that manages the deployment environment, which can be one of development, integration, staging, or production.
 
