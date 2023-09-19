@@ -1,3 +1,13 @@
+[![LinuxUnitTest](https://github.com/nao1215/denv/actions/workflows/linux_test.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/linux_test.yml)
+[![MacUnitTest](https://github.com/nao1215/denv/actions/workflows/mac_test.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/mac_test.yml)
+[![WindowsUnitTest](https://github.com/nao1215/denv/actions/workflows/windows_test.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/windows_test.yml)
+[![FreeBSDTest](https://github.com/nao1215/denv/actions/workflows/freebsd.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/freebsd.yml)
+[![NetBSDTest](https://github.com/nao1215/denv/actions/workflows/netbsd.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/netbsd.yml)
+[![OpenBSDTest](https://github.com/nao1215/denv/actions/workflows/openbsd.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/openbsd.yml)
+[![DragonflyBSDTest](https://github.com/nao1215/denv/actions/workflows/dragonfly.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/dragonfly.yml)
+[![Gosec](https://github.com/nao1215/denv/actions/workflows/security.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/security.yml)
+[![Vuluncheck](https://github.com/nao1215/denv/actions/workflows/govulncheck.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/govulncheck.yml)
+[![reviewdog](https://github.com/nao1215/denv/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/nao1215/denv/actions/workflows/reviewdog.yml)
 # denv
 "denv" is a library that manages the deployment environment, which can be one of development, integration, staging, or production.
 
