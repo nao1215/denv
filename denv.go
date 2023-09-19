@@ -3,8 +3,7 @@ package denv
 
 import (
 	"fmt"
-
-	"github.com/caarlos0/env/v9"
+	"os"
 )
 
 const (
@@ -22,18 +21,16 @@ const (
 // It reads the configuration from the environment variable DENV_DEPLOYMENT_ENV.
 // This can be set to "development", "integration", "staging", or "production".
 type Env struct {
-	// The environment the application is running in.
+	// Environment the application is running in.
 	// This can be set to "development", "integration", "staging", or "production".
-	Environment string `env:"DENV_DEPLOYMENT_ENV,required"`
+	Environment string
 }
 
 // NewEnv creates a new Env.
 // If the environment variable DENV_DEPLOYMENT_ENV is not set, it returns an ErrInvalidEnvironment.
 func NewEnv() (*Env, error) {
 	e := Env{}
-	if err := env.Parse(&e); err != nil {
-		return nil, fmt.Errorf("%w: %s", ErrEnvParse, err.Error())
-	}
+	e.Environment = os.Getenv("DENV_DEPLOYMENT_ENV")
 
 	if e.Environment != Development && e.Environment != Integration && e.Environment != Staging && e.Environment != Production {
 		return nil, fmt.Errorf("%w: %s", ErrInvalidEnvironment, e.Environment)
