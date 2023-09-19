@@ -69,4 +69,3 @@ func Example() {
 
 ## LICENSE
 [MIT](./LICENSE)
-```
