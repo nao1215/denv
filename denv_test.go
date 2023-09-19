@@ -8,8 +8,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 )
 
-func TestNewEnv(t *testing.T) {
-	t.Run("when the environment variable is not set", func(t *testing.T) {
+func TestNewEnv(t *testing.T) { //nolint
+	t.Run("when the environment variable is not set", func(t *testing.T) { //nolint
 		t.Setenv("DENV_DEPLOYMENT_ENV", "")
 
 		_, err := NewEnv()
@@ -18,7 +18,7 @@ func TestNewEnv(t *testing.T) {
 		}
 	})
 
-	t.Run("when the environment variable is set to an invalid value", func(t *testing.T) {
+	t.Run("when the environment variable is set to an invalid value", func(t *testing.T) { //nolint
 		t.Setenv("DENV_DEPLOYMENT_ENV", "invalid")
 
 		_, err := NewEnv()
@@ -27,7 +27,7 @@ func TestNewEnv(t *testing.T) {
 		}
 	})
 
-	t.Run("when the environment variable is set to a development", func(t *testing.T) {
+	t.Run("when the environment variable is set to a development", func(t *testing.T) { //nolint
 		t.Setenv("DENV_DEPLOYMENT_ENV", "development")
 
 		got, err := NewEnv()
@@ -43,7 +43,7 @@ func TestNewEnv(t *testing.T) {
 		}
 	})
 
-	t.Run("when the environment variable is set to an integration", func(t *testing.T) {
+	t.Run("when the environment variable is set to an integration", func(t *testing.T) { //nolint
 		t.Setenv("DENV_DEPLOYMENT_ENV", "integration")
 
 		got, err := NewEnv()
@@ -58,7 +58,7 @@ func TestNewEnv(t *testing.T) {
 		}
 	})
 
-	t.Run("when the environment variable is set to a staging", func(t *testing.T) {
+	t.Run("when the environment variable is set to a staging", func(t *testing.T) { //nolint
 		t.Setenv("DENV_DEPLOYMENT_ENV", "staging")
 
 		got, err := NewEnv()
@@ -73,7 +73,7 @@ func TestNewEnv(t *testing.T) {
 		}
 	})
 
-	t.Run("when the environment variable is set to a production", func(t *testing.T) {
+	t.Run("when the environment variable is set to a production", func(t *testing.T) { //nolint
 		t.Setenv("DENV_DEPLOYMENT_ENV", "production")
 
 		got, err := NewEnv()

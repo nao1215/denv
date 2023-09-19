@@ -18,7 +18,10 @@
    
 ```go
 func Example() {
-	os.Setenv("DENV_DEPLOYMENT_ENV", denv.Staging)
+	if err := os.Setenv("DENV_DEPLOYMENT_ENV", denv.Staging); err != nil {
+		fmt.Println("Error setting environment variable:", err)
+		return
+	}
 
 	// Create a new Env instance.
 	env, err := denv.NewEnv()

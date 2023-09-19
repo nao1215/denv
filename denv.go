@@ -32,7 +32,7 @@ type Env struct {
 func NewEnv() (*Env, error) {
 	e := Env{}
 	if err := env.Parse(&e); err != nil {
-		return nil, fmt.Errorf("%w: %s", ErrEnvParse, err)
+		return nil, fmt.Errorf("%w: %s", ErrEnvParse, err.Error())
 	}
 
 	if e.Environment != Development && e.Environment != Integration && e.Environment != Staging && e.Environment != Production {
