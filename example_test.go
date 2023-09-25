@@ -8,7 +8,7 @@ import (
 )
 
 func Example() {
-	if err := os.Setenv("DENV_DEPLOYMENT_ENV", denv.Staging); err != nil {
+	if err := os.Setenv("APP_ENV", denv.Staging); err != nil {
 		fmt.Println("Error setting environment variable:", err)
 		return
 	}

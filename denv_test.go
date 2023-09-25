@@ -10,7 +10,7 @@ import (
 
 func TestNewEnv(t *testing.T) { //nolint
 	t.Run("when the environment variable is not set", func(t *testing.T) { //nolint
-		t.Setenv("DENV_DEPLOYMENT_ENV", "")
+		t.Setenv("APP_ENV", "")
 
 		_, err := NewEnv()
 		if errors.Is(err, ErrEnvParse) {
@@ -19,7 +19,7 @@ func TestNewEnv(t *testing.T) { //nolint
 	})
 
 	t.Run("when the environment variable is set to an invalid value", func(t *testing.T) { //nolint
-		t.Setenv("DENV_DEPLOYMENT_ENV", "invalid")
+		t.Setenv("APP_ENV", "invalid")
 
 		_, err := NewEnv()
 		if errors.Is(err, ErrEnvParse) {
@@ -28,7 +28,7 @@ func TestNewEnv(t *testing.T) { //nolint
 	})
 
 	t.Run("when the environment variable is set to a development", func(t *testing.T) { //nolint
-		t.Setenv("DENV_DEPLOYMENT_ENV", "development")
+		t.Setenv("APP_ENV", "development")
 
 		got, err := NewEnv()
 		if err != nil {
@@ -44,7 +44,7 @@ func TestNewEnv(t *testing.T) { //nolint
 	})
 
 	t.Run("when the environment variable is set to an integration", func(t *testing.T) { //nolint
-		t.Setenv("DENV_DEPLOYMENT_ENV", "integration")
+		t.Setenv("APP_ENV", "integration")
 
 		got, err := NewEnv()
 		if err != nil {
@@ -59,7 +59,7 @@ func TestNewEnv(t *testing.T) { //nolint
 	})
 
 	t.Run("when the environment variable is set to a staging", func(t *testing.T) { //nolint
-		t.Setenv("DENV_DEPLOYMENT_ENV", "staging")
+		t.Setenv("APP_ENV", "staging")
 
 		got, err := NewEnv()
 		if err != nil {
@@ -74,7 +74,7 @@ func TestNewEnv(t *testing.T) { //nolint
 	})
 
 	t.Run("when the environment variable is set to a production", func(t *testing.T) { //nolint
-		t.Setenv("DENV_DEPLOYMENT_ENV", "production")
+		t.Setenv("APP_ENV", "production")
 
 		got, err := NewEnv()
 		if err != nil {

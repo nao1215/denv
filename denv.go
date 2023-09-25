@@ -18,7 +18,7 @@ const (
 )
 
 // Env is the environment the application is running in.
-// It reads the configuration from the environment variable DENV_DEPLOYMENT_ENV.
+// It reads the configuration from the environment variable APP_ENV.
 // This can be set to "development", "integration", "staging", or "production".
 type Env struct {
 	// Environment the application is running in.
@@ -27,10 +27,10 @@ type Env struct {
 }
 
 // NewEnv creates a new Env.
-// If the environment variable DENV_DEPLOYMENT_ENV is not set, it returns an ErrInvalidEnvironment.
+// If the environment variable APP_ENV is not set, it returns an ErrInvalidEnvironment.
 func NewEnv() (*Env, error) {
 	e := Env{}
-	e.Environment = os.Getenv("DENV_DEPLOYMENT_ENV")
+	e.Environment = os.Getenv("APP_ENV")
 
 	if e.Environment != Development && e.Environment != Integration && e.Environment != Staging && e.Environment != Production {
 		return nil, fmt.Errorf("%w: %s", ErrInvalidEnvironment, e.Environment)

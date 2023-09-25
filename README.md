@@ -16,12 +16,12 @@
 
 ## How to use
 1. You import the library: "github.com/nao1215/denv"
-2. You set the environment variable "DENV_DEPLOYMENT_ENV" to one of "development", "integration", "staging", or "production".
+2. You set the environment variable "APP_ENV" to one of "development", "integration", "staging", or "production".
 3. You create a new Env instance with denv.NewEnv().
    
 ```go
 func Example() {
-	if err := os.Setenv("DENV_DEPLOYMENT_ENV", denv.Staging); err != nil {
+	if err := os.Setenv("APP_ENV", denv.Staging); err != nil {
 		fmt.Println("Error setting environment variable:", err)
 		return
 	}
